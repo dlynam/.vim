@@ -1,0 +1,17 @@
+*.rdb
+*.tch
+
+*.rbc
+*.sassc
+*.sqo
+*.swp
+*.swo
+*~
+*.rb~
+*.rhtml~
+*.html.erb~
+
+**.orig
+rerun.txt
+.project
+.DS_Store
