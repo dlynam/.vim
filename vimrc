@@ -42,6 +42,13 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
+"open go file in a new tab"
+nnoremap gf <C-w>gf
+
+"map go to definition to gd"
+nmap <silent> gd :call CocAction('jumpDefinition', 'tabe')<CR>
+
+
 "change tabs to spaces"
 :set tabstop=2
 :set shiftwidth=2

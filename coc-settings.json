@@ -5,6 +5,7 @@
   "solargraph.commandPath": "/usr/local/var/rbenv/shims/solargraph",
   "codeLens.enable": false,
   "solargraph.diagnostics": true,
+  "coc.preferences.jumpCommand": "tabe",
   "diagnostic-languageserver.linters": {
     "rubocop": {
       "command": "bundle",
