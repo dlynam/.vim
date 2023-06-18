@@ -28,6 +28,20 @@ autocmd vimenter * NERDTree
 "set default nerdtree directory to rails_apps"
 cd ~/rails_apps
 
+
+"coc configuration"
+let g:coc_node_path = "/opt/homebrew/bin/node"
+let g:coc_global_extensions = ["coc-diagnostic", "coc-solargraph"]
+let g:LanguageClient_serverCommands = {
+        \ 'ruby': ['solargraph']
+        \ }
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+
 "change tabs to spaces"
 :set tabstop=2
 :set shiftwidth=2

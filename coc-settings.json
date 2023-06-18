@@ -1,0 +1,37 @@
+{
+  "npm.binPath": "/opt/homebrew/bin/npm",
+  "solargraph.useBundler": false,
+	"solargraph.bundlerPath": "/usr/local/var/rbenv/versions/2.7.7/lib/ruby/gems/2.7.0/gems/bundler-2.4.10/exe/bundler",
+  "solargraph.commandPath": "/usr/local/var/rbenv/shims/solargraph",
+  "codeLens.enable": false,
+  "solargraph.diagnostics": true,
+  "diagnostic-languageserver.linters": {
+    "rubocop": {
+      "command": "bundle",
+      "sourceName": "rubocop",
+      "debounce": 101,
+      "args": [
+        "exec",
+        "rubocop",
+        "--format",
+        "json",
+        "--force-exclusion",
+        "%filepath"
+      ],
+      "parseJson": {
+        "errorsRoot": "files[0].offenses",
+        "line": "location.line",
+        "column": "location.column",
+        "message": "[${cop_name}] ${message}",
+        "security": "severity"
+      },
+      "securities": {
+        "fatal": "error",
+        "warning": "warning"
+      }
+    }
+  },
+  "diagnostic-languageserver.filetypes": {
+    "ruby": "rubocop"
+  }
+}
