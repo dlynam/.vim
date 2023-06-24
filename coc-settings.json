@@ -3,7 +3,7 @@
   "solargraph.useBundler": false,
 	"solargraph.bundlerPath": "/usr/local/var/rbenv/versions/2.7.7/lib/ruby/gems/2.7.0/gems/bundler-2.4.10/exe/bundler",
   "solargraph.commandPath": "/usr/local/var/rbenv/shims/solargraph",
-  "codeLens.enable": false,
+  "codeLens.enable": true,
   "solargraph.diagnostics": true,
   "coc.preferences.jumpCommand": "tabe",
   "diagnostic-languageserver.linters": {
