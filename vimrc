@@ -12,7 +12,6 @@ let g:jellybeans_overrides = {
 \    'background': { 'guibg': '1c0119' },
 \}
 
-:set nofoldenable
 
 ":set guifont=Menlo\ Regular:h14
 
@@ -56,6 +55,7 @@ syntax on             " Enable syntax highlighting
 filetype plugin indent on
 
 
+"--------------- NERDTree configurations --------------------------
 " Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
@@ -72,6 +72,8 @@ let NERDTreeDirArrows = 1
 
 "Automatically delete the buffer of the file you just deleted with NerdTree"
 let NERDTreeAutoDeleteBuffer = 1
+
+let g:NERDTreeWinSize=40
 
 "set default nerdtree directory to rails_apps"
 cd ~/rails_apps
@@ -90,8 +92,16 @@ let g:LanguageClient_serverCommands = {
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+"--------------- vim-ruby configurations --------------------------
+":set nofoldenable
+:let ruby_fold = 1
+:set foldlevel=20
+:set foldlevelstart=20
+:set foldmethod=indent
 
 
+#----------------- Github co-pilot -------------------------------
+let g:copilot_node_command = "/opt/homebrew/bin/node"
 
 "open go file in a new tab"
 nnoremap gf <C-w>gf
