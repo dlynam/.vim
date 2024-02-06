@@ -162,6 +162,7 @@ map <Leader>a :call RunAllSpecs()<CR>
 "do not replace paste register with new content"
 xnoremap p "_dP
 
-
+" ctrlp settings
+let g:ctrlp_use_caching = 0
 
 
